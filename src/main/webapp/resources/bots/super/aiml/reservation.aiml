@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+    	<pattern>Bonjour *</pattern>
+    	<template><srai>REPONSEBONJOUR</srai></template>
+	</category>
+
+	<category>
+	    <pattern>SALAM *</pattern>
+	    <template><srai>REPONSEBONJOUR</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>Salut *</pattern>
+	    <template><srai>REPONSEBONJOUR-çol  </srai></template>
+	</category>
+	
+	<category>
+    	<pattern>Bonjour</pattern>
+    	<template><srai>REPONSEBONJOUR</srai></template>
+	</category>
+
+	<category>
+	    <pattern>SALAM</pattern>
+	    <template><srai>REPONSEBONJOUR</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>Salut</pattern>
+	    <template><srai>REPONSEBONJOUR</srai></template>
+	</category>
+
+	<category>
+	    <pattern>REPONSEBONJOUR</pattern>
+	    <template>
+	        <random>
+	            <li>Bonjour ! Comment puis-je vous aider ?</li>
+	            <li>Salut ! Voulez-vous effectuer une reservation ?</li>
+	        </random>
+	    </template>
+	</category>
+    
+    
+	<category>
+    		<pattern>Je veux reserver *</pattern>
+    		<template><srai>REPONSERES</srai></template>
+	</category>
+	
+	<category>
+    		<pattern>* reservation *</pattern>
+    		<template><srai>REPONSERES</srai></template>
+	</category>
+	
+	<category>
+	    <pattern>REPONSERES</pattern>
+	    <template>quel est votre depart</template>
+    </category>
+
+	<category>
+        <pattern>de *</pattern>
+        <that>quel est votre depart</that>
+        <template>
+            <think><set name="dep"><star/></set></think>
+            quelle est votre destination
+        </template>
+    </category>
+    
+    <category>
+        <pattern>vers *</pattern>
+        <that>quelle est votre destination</that>
+        <template>
+        	 <think><set name="dest"><star/></set></think>
+            donnez moi votre nom complet
+        </template>
+    </category>
+    
+    <category>
+        <pattern>est * </pattern>
+        <that>donnez moi votre nom complet</that>
+         <template>
+            <think><set name="nom"><star/></set></think>
+            BUSDISPO,<get name="dep"/>,<get name="dest"/>,<get name="nom"/>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>je choisis *</pattern>
+        <template>
+            <think><set name="bus"><star/></set></think>
+            RESERVER,<get name="nom"/>,<get name="dep"/>,<get name="dest"/>,<get name="bus"/>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Je n'ai pas compris
+        </template>
+    </category>
+    
+   
+    
+  
+</aiml>

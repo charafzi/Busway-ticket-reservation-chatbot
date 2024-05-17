@@ -1,0 +1,128 @@
+.steplist {
+        border-top: 2px solid #b10f2e;
+        display: inline-flex;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        list-style-type: none;
+        gap: 1em;
+        margin: 0;
+        padding: 0;
+        --circle-radius: 8px;
+      }
+
+      .steplist li {
+        color: #090c9b;
+        cursor: pointer;
+        padding: calc(5px + var(--circle-radius)) 0 0;
+        margin: 0;
+        position: relative;
+        text-align: center;
+      }
+
+      .steplist li::before {
+        background-color: #090c9b;
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+        height: calc(2 * var(--circle-radius));
+        width: calc(2 * var(--circle-radius));
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+      }
+
+      .steplist .active {
+        color: black;
+      }
+
+      .steplist .active::before {
+        background-color: green;
+        box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.25);
+      }
+
+      .steplist li:first-child::after {
+        background-color: white;
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: -2px;
+        left: calc(-50% - var(--circle-radius));
+      }
+
+      .steplist li:last-child::after {
+        background-color: white;
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: -2px;
+        left: calc(50% + var(--circle-radius));
+      }
+
+      .circle-big {
+        --circle-radius: 12px;
+      }
+
+      #listation {
+        font-size: 10px;
+        font-weight: bold;
+        color: #090c9b;
+      }
+
+      #liheure{
+        font-size: 12px;
+        font-weight: bold;
+        color: #0C0F0A;
+      }
+      
+#card-header{
+	background-color: #090c9b;
+}
+
+#outline{
+	color: #FBFBFF; /* Fill color */
+    -webkit-text-stroke-width: 0.5px; /* Outline width */
+    -webkit-text-stroke-color: #0C0F0A; /* Outline color */
+}
+
+table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+btn{
+	background: #b10f2e;
+	color: #FBFBFF;
+}
+#button-res{
+	background: #b10f2e;
+	color: #FBFBFF;
+}
+
+#button-res:hover{
+  background:#FBFBFF;
+  color:#b10f2e;
+}
+#button-res:before,#button-res:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #FBFBFF;
+  transition:400ms ease all;
+}
+#button-res:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}

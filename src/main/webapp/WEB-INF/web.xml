@@ -1,0 +1,96 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+  <servlet>
+    <servlet-name>Bus_Dis</servlet-name>
+    <servlet-class>project.sysResTicketbw.controleur.Bus_Dis</servlet-class>
+  </servlet>
+
+  
+  <servlet>
+  	<servlet-name>Info_Conducteur</servlet-name>
+  	<display-name>Info_Conducteur</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.Info_Conducteur</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Bus_</servlet-name>
+  	<display-name>Bus_</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.Bus_</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Info_Bus</servlet-name>
+  	<display-name>Info_Bus</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.Info_Bus</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InfoBus</servlet-name>
+  	<display-name>InfoBus</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.InfoBus</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AfficherInfoVoy</servlet-name>
+  	<display-name>AfficherInfoVoy</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.AfficherInfoVoy</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ChatServlet</servlet-name>
+  	<display-name>ChatServlet</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.ChatServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Chatbot</servlet-name>
+  	<display-name>Chatbot</display-name>
+  	<description></description>
+  	<servlet-class>project.sysResTicketbw.controleur.Chatbot</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Bus_Dis</servlet-name>
+    <url-pattern>/Bus_Dis</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Info_Conducteur</servlet-name>
+  	<url-pattern>/Info_Conducteur</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Bus_</servlet-name>
+  	<url-pattern>/Bus_</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Info_Bus</servlet-name>
+  	<url-pattern>/Info_Bus</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InfoBus</servlet-name>
+  	<url-pattern>/InfoBus</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AfficherInfoVoy</servlet-name>
+  	<url-pattern>/AfficherInfoVoy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChatServlet</servlet-name>
+  	<url-pattern>/ChatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Chatbot</servlet-name>
+  	<url-pattern>/Chatbot</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

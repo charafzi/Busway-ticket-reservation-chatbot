@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ma.ilisi.fstm</groupId>
+  <artifactId>Busway_Online_V2.0</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>BuswayTicketsOnline Maven Webapp</name> 
+  <url>http://maven.apache.org</url>
+  <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+ <dependencies>  
+ <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+ </dependency>
+ 
+ <dependency>
+      <groupId>com.github.kenglxn.QRGen</groupId> 
+      <artifactId>javase</artifactId> 
+      <version>3.0.1</version>
+ </dependency> 
+  
+ 
+ <dependency>
+            <groupId>net.glxn.qrgen</groupId>
+            <artifactId>javase</artifactId>
+            <version>2.0</version>
+</dependency>
+
+ 	
+ <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version> <!-- You can adjust the version as needed -->
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>5.0.0</version> <!-- ou la version compatible avec Tomcat 10.1.18 -->
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+		    <groupId>org.neo4j.driver</groupId>
+		    <artifactId>neo4j-java-driver</artifactId>
+		    <version>5.12.0</version>
+	</dependency>
+	
+	<dependency>
+  		<groupId>com.google</groupId>
+  		<artifactId>Ab</artifactId>
+  		<version>0.0.4.3</version>
+  		<scope>system</scope>
+  		<systemPath>C:\Users\Achra\Documents\ILISI2\JEE\Workspace\Busway_Online_V2.0\src\main\webapp\WEB-INF\Ab.jar</systemPath>
+  	</dependency>
+    
+    
+  </dependencies>
+  
+  <build>
+    <finalName>Busway_Online_V2.0</finalName>
+  </build>
+</project>

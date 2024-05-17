@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>mon depart est *</pattern>
+        <template>
+            <think><set name="dep"><star/></set></think>
+            et votre destination 
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ma destination est *</pattern>
+        <that>et votre destination </that>
+        <template>
+        	 <think><set name="dest"><star/></set></think>
+            et votre nom complet
+        </template>
+    </category>
+    
+    <category>
+        <pattern>mon nom est * </pattern>
+        <that> et votre nom complet</that>
+         <template>
+            <think><set name="nom"><star/></set></think>
+            BUSDISPO,<get name="dep"/>,<get name="dest"/>,<get name="nom"/>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>je choisis *</pattern>
+        <template>
+            <think><set name="bus"><star/></set></think>
+            RESERVER,<get name="nom"/>,<get name="dep"/>,<get name="dest"/>,<get name="bus"/>
+        </template>
+    </category>
+</aiml>
+
